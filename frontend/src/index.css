@@ -1,0 +1,244 @@
+/* src/index.css */
+@import "tailwindcss";
+
+/* ───────────────────────────────── TOKENS ───────────────────────────────── */
+:root{
+  --fc-bg: #f7f8fb;
+  --fc-text: #0f172a;
+
+  /* brand */
+  --fc-primary: #0a4aa3;      /* blu */
+  --fc-primary-600: #0c56bd;
+  --fc-accent:  #0bb36f;      /* verde */
+
+  /* surfaces */
+  --fc-surface: #ffffff;
+  --fc-surface-2: #f3f4f6;
+  --fc-border: rgba(17,24,39,.08);
+  --fc-muted: #4b5563;
+}
+
+[data-theme="dark"]{
+  --fc-bg: #0b1020;
+  --fc-text: #e5e7eb;
+
+  --fc-primary: #4a8dff;
+  --fc-primary-600: #3b7ae5;
+  --fc-accent:  #19d38a;
+
+  --fc-surface: #0f1730;   /* card */
+  --fc-surface-2: #0b1226; /* tabelle/righe */
+  --fc-border: rgba(255,255,255,.12);
+  --fc-muted: #cbd5e1;
+}
+
+/* base */
+html, body, #root { height: 100%; }
+body { background: var(--fc-bg); color: var(--fc-text); }
+
+/* layout */
+.container-gz { @apply mx-auto max-w-7xl px-4 sm:px-6 lg:px-8; }
+
+/* ───────────────────────────── SURFACES / CARDS ─────────────────────────── */
+.card {
+  @apply rounded-2xl shadow-sm ring-1;
+  background: var(--fc-surface);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.04);
+  border-color: var(--fc-border);
+}
+[data-theme="dark"] .card {
+  background: var(--fc-surface);
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,.25);
+}
+
+.card-hover { @apply transition hover:shadow-md hover:-translate-y-0.5; }
+
+/* ───────────────────────────── BUTTONS / INPUTS ─────────────────────────── */
+.btn { @apply inline-flex items-center justify-center rounded-xl px-4 py-2 font-semibold transition select-none; }
+.btn-primary {
+  background: var(--fc-primary);
+  color: #fff;
+}
+.btn-primary:hover { filter: brightness(1.06); }
+.btn-ghost {
+  @apply bg-transparent;
+}
+.btn-ghost:hover {
+  background: color-mix(in hsl, var(--fc-primary) 10%, transparent);
+}
+.btn-outline {
+  @apply border;
+  border-color: var(--fc-border);
+}
+.btn-outline:hover { background: color-mix(in hsl, var(--fc-primary) 6%, transparent); }
+
+.input, .textarea {
+  @apply w-full rounded-xl px-3 py-2 outline-none transition;
+  border: 1px solid var(--fc-border);
+  background: #fff;
+  color: var(--fc-text);
+}
+[data-theme="dark"] .input,
+[data-theme="dark"] .textarea {
+  background: #0d1835;
+  color: var(--fc-text);
+}
+.input:focus, .textarea:focus {
+  box-shadow: 0 0 0 4px color-mix(in hsl, var(--fc-primary) 28%, transparent);
+  border-color: color-mix(in hsl, var(--fc-primary) 45%, var(--fc-border));
+}
+
+/* clamp util */
+.line-clamp-2 { display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden; }
+.line-clamp-3 { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; }
+
+/* badges */
+.badge { @apply inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-medium; }
+.badge-green { @apply bg-emerald-100 text-emerald-700; }
+.badge-gray  { @apply bg-gray-100 text-gray-600; }
+[data-theme="dark"] .badge-green { background: #0a3d2b; color: #a7f3d0; }
+[data-theme="dark"] .badge-gray  { background: #111827; color: #cbd5e1; }
+
+/* prose (articoli) */
+.prose :where(h1,h2,h3,h4){ @apply font-bold; color: var(--fc-text); }
+.prose a { color: var(--fc-primary); }
+
+/* ───────────────────────── NAV / FOOTER LINKS ───────────────────────────── */
+.nav-link {
+  @apply px-3 py-2 rounded-lg text-sm font-semibold transition;
+  text-decoration: none;
+  color: #111827;
+}
+[data-theme="dark"] .nav-link { color: #e5e7eb; }
+
+.nav-link:hover {
+  background: color-mix(in hsl, var(--fc-primary) 12%, transparent);
+  color: color-mix(in hsl, var(--fc-primary) 65%, #0a2a63);
+}
+.nav-link-active {
+  color: #fff;
+  background: var(--fc-primary);
+}
+
+.footer-link {
+  @apply inline-flex items-center gap-2 rounded-lg px-2 py-1 transition;
+  text-decoration: none;
+  color: #6b7280;
+}
+[data-theme="dark"] .footer-link { color: var(--fc-muted); }
+.footer-link:hover {
+  background: color-mix(in hsl, var(--fc-primary) 10%, transparent);
+  color: var(--fc-primary);
+}
+
+/* ─────────────────────────── BREADCRUMBS ───────────────────────────────── */
+.crumb-link { @apply inline-flex items-center gap-1 rounded-md text-sm; text-decoration: none; padding: 0.25rem 0.5rem; color: #1f2937; }
+[data-theme="dark"] .crumb-link { color: #e5e7eb; }
+.crumb-link:hover { background: color-mix(in hsl, var(--fc-primary) 12%, transparent); color: color-mix(in hsl, var(--fc-primary) 70%, #0a2a63); }
+.crumb-active { color:#fff !important; background: var(--fc-primary); }
+.crumb-sep { @apply text-gray-400 select-none; padding: 0 4px; position: relative; top: 1px; line-height: 1; }
+
+/* ───────────────────────────── HERO / TICKER ────────────────────────────── */
+.hero-gradient{
+  background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,.15) 40%, rgba(0,0,0,.55) 100%);
+}
+@keyframes slideUp { 0%{ transform: translateY(8px); opacity:0;} 10%{opacity:1;} 100%{ transform:none; opacity:1;} }
+.animate-slide-up { animation: slideUp .45s ease-out; }
+
+/* ────────────────────────────── TABLES / STANDINGS ─────────────────────── */
+/* base table look */
+.table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+.table th {
+  @apply text-[11px] font-bold uppercase tracking-wider;
+  color: #6b7280;
+  background: #f9fafb;
+}
+.table td { @apply text-sm; color: #111827; }
+[data-theme="dark"] .table th {
+  color: #cbd5e1;
+  background: rgba(255,255,255,.04);
+}
+[data-theme="dark"] .table td { color: #e5e7eb; }
+
+/* classifica specifica */
+.table-standings thead th {
+  position: sticky; top: 0;
+  backdrop-filter: saturate(1.2) blur(4px);
+  z-index: 1;
+}
+.table-standings tbody tr {
+  background: linear-gradient(90deg, rgba(11,179,111,.05), transparent 60%);
+}
+.table-standings tbody tr:nth-child(even){
+  background: linear-gradient(90deg, rgba(11,179,111,.07), transparent 60%);
+}
+[data-theme="dark"] .table-standings tbody tr {
+  background: linear-gradient(90deg, rgba(25,211,138,.10), transparent 60%);
+}
+[data-theme="dark"] .table-standings tbody tr:nth-child(even){
+  background: linear-gradient(90deg, rgba(25,211,138,.14), transparent 60%);
+}
+
+/* strip dorata SOLO per 1° posto */
+.table-standings tbody tr.is-first {
+  background: linear-gradient(90deg, rgba(245,158,11,.16), transparent 55%);
+}
+[data-theme="dark"] .table-standings tbody tr.is-first {
+  background: linear-gradient(90deg, rgba(245,158,11,.22), transparent 55%);
+}
+
+/* ─ chip posizione (1 oro, 2-3 verde) ─ */
+.chip-rank {
+  @apply inline-flex items-center justify-center rounded-full text-[11px] font-black w-6 h-6;
+  background: #e5e7eb; color: #111827;
+}
+.chip-rank.gold {
+  background: linear-gradient(180deg,#fde68a,#f59e0b);
+  color: #1f2937;
+}
+.chip-rank.silver {
+  background: linear-gradient(180deg,#e5e7eb,#cbd5e1);
+  color:#1f2937;
+}
+.chip-rank.bronze {
+  background: linear-gradient(180deg,#f5d0c5,#f59e0b);
+  color:#1f2937;
+}
+.chip-rank.green {
+  background: linear-gradient(180deg,#a7f3d0,#34d399);
+  color:#064e3b;
+}
+
+/* mini-standing card (uniforme in dark) */
+.standing-mini-row {
+  @apply grid items-center gap-3 rounded-xl px-3 py-1.5;
+  grid-template-columns: 2rem 1fr auto;
+  background: linear-gradient(90deg, rgba(11,179,111,.06), transparent 60%);
+}
+[data-theme="dark"] .standing-mini-row {
+  background: linear-gradient(90deg, rgba(25,211,138,.12), transparent 60%);
+}
+
+/* helpers per separatori leggeri */
+.hr-soft { border-top: 1px solid var(--fc-border); }
+
+
+/* === Albo d’oro: medaglie & tabelle === */
+.badge-medal {
+  @apply inline-flex items-center justify-center rounded-full text-xs font-black w-6 h-6;
+  color: #fff;
+}
+.badge-gold   { background: linear-gradient(135deg, #d4af37, #f0c14b); } /* 1° */
+.badge-silver { background: linear-gradient(135deg, #9aa3b2, #cdd5df); } /* 2° (mobile) */
+.badge-bronze { background: linear-gradient(135deg, #7cc18f, #2fb579); } /* 3°/secondo come da tua richiesta */
+[data-theme="dark"] .table-soft {
+  background: linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,.03));
+}
+.table-soft { background: linear-gradient(180deg, rgba(0,0,0,.02), rgba(0,0,0,.03)); }
+
+thead.sticky-head th { position: sticky; top: 0; z-index: 1; }
+

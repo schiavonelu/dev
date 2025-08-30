@@ -1,0 +1,389 @@
+{
+  "seasons": [
+    {
+      "season": "2009/2010",
+      "champion": "IL GIOIELLO 17",
+      "championManager": "Gennaro Pesce",
+      "runnerUp": "ALIGUAI",
+      "runnerUpManager": "Claudio Rielli",
+      "third": "GUINNESS FC",
+      "thirdManager": "Cristian Facioni",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "-"
+        },
+        {
+          "name": "Europa League",
+          "winner": "-"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "ALIGUAI"
+        }
+      ]
+    },
+    {
+      "season": "2010/2011",
+      "champion": "BAYER LEVERPUSSEN",
+      "championManager": "Andrea SOLDATI",
+      "runnerUp": "FENOMELANDIA",
+      "runnerUpManager": "MARIO BELLINO",
+      "third": "IN MEMORY OF FILIPPO",
+      "thirdManager": "ANTONIO GUERRA",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "IN MEMORY OF FILIPPO"
+        },
+        {
+          "name": "Europa League",
+          "winner": "SCIACALAHA"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "GUINNESS FC"
+        }
+      ]
+    },
+    {
+      "season": "2011/2012",
+      "champion": "INCALAHA",
+      "championManager": "LUIGI SCHIAVONE",
+      "runnerUp": "NEW GAME",
+      "runnerUpManager": "FRANCESCO DI PIETRO",
+      "third": "LONGOBARDA",
+      "thirdManager": "UMBERTO LINDORO",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "VICENZA 2012"
+        },
+        {
+          "name": "Europa League",
+          "winner": "INCALAHA"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "INCALAHA"
+        }
+      ]
+    },
+    {
+      "season": "2012/2013",
+      "champion": "IL GIOIELLO 17",
+      "championManager": "Gennaro Pesce",
+      "runnerUp": "SADRACCA FC",
+      "runnerUpManager": "ANTONIO CARDONE",
+      "third": "UNION STRUNZ FC",
+      "thirdManager": "GIUSEPPE PEZZULLO",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "GIALLOROSSI UNITED"
+        },
+        {
+          "name": "Europa League",
+          "winner": "SADRACCA FC"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "GAMBRINUS FD"
+        }
+      ]
+    },
+    {
+      "season": "2013/2014",
+      "champion": "SADRACCA FC",
+      "championManager": "ANTONIO CARDONE",
+      "runnerUp": "UNION STRUNZ FC",
+      "runnerUpManager": "GIUSEPPE PEZZULLO",
+      "third": "GIALLOROSSI UNITED",
+      "thirdManager": "GIANLUCA GERBINO",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "UNION STRUNZ FC"
+        },
+        {
+          "name": "Europa League",
+          "winner": "IL GIOIELLO 17"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "ESERCITO DI SILVIO"
+        }
+      ]
+    },
+    {
+      "season": "2014/2015",
+      "champion": "SCUGNIZZI UNITED",
+      "championManager": "ANTONIO PETRELLESE",
+      "runnerUp": "SENZA PADRONI FC",
+      "runnerUpManager": "LUIGI SCHIAVONE",
+      "third": "UNION STRUNZ FC",
+      "thirdManager": "GIUSEPPE PEZZULLO",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "SENZA PADRONI FC"
+        },
+        {
+          "name": "Europa League",
+          "winner": "SENZA PADRONI FC"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "UNION STRUNZ FC"
+        }
+      ]
+    },
+    {
+      "season": "2015/2016",
+      "champion": "DAMA FANTASOCCER",
+      "championManager": "DAVIDE INGLESI",
+      "runnerUp": "REALCOLIZZATI",
+      "runnerUpManager": "PIETRO TAMBURRINO",
+      "third": "SPORTING CRISTAL METH",
+      "thirdManager": "CARLO CASTELLANO",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "SENZA PADRONI FC"
+        },
+        {
+          "name": "Europa League",
+          "winner": "SPORTING CRISTAL METH"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "SPORTING CRISTAL METH"
+        }
+      ]
+    },
+    {
+      "season": "2016/2017",
+      "champion": "SENZA PADRONI FC",
+      "championManager": "LUIGI SCHIAVONE",
+      "runnerUp": "GUINNESS FC",
+      "runnerUpManager": "CRISTIAN FACIONI",
+      "third": "VINTAGE FOOTBALL CLUB",
+      "thirdManager": "GIANLUCA GERBINO",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "IL GIOIELLO 17"
+        },
+        {
+          "name": "Europa League",
+          "winner": "REALCOLIZZATI"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "SENZA PADRONI FC"
+        }
+      ]
+    },
+    {
+      "season": "2017/2018",
+      "champion": "LEONI INDOMABILI",
+      "championManager": "FRANCESCO TARANTINO",
+      "runnerUp": "MANTUS",
+      "runnerUpManager": "GIUSEPPE PRENCIPE",
+      "third": "SENZA PADRONI FC",
+      "thirdManager": "LUIGI SCHIAVONE",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "DAMA FANTASOCCER"
+        },
+        {
+          "name": "Europa League",
+          "winner": "LEONI INDOMABILI"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "UNION STRUNZ FC"
+        }
+      ]
+    },
+    {
+      "season": "2018/2019",
+      "champion": "IRRIDUCIBILI AZERBAIJAN",
+      "championManager": "MASSIMILIANO ZERBINI",
+      "runnerUp": "UNION STRUNZ FC",
+      "runnerUpManager": "GIUSEPPE PEZZULLO",
+      "third": "VINTAGE FOOTBALL CLUB",
+      "thirdManager": "GIANLUCA GERBINO",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "UNION STRUNZ FC"
+        },
+        {
+          "name": "Europa League",
+          "winner": "GUINNESS FC"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "SENZA PADRONI FC"
+        }
+      ]
+    },
+    {
+      "season": "2019/2020",
+      "champion": "VINTAGE FOOTBALL CLUB",
+      "championManager": "GIANLUCA GERBINO",
+      "runnerUp": "GUINNESS FC",
+      "runnerUpManager": "CRISTIAN FACIONI",
+      "third": "UNION STRUNZ FC",
+      "thirdManager": "GIUSEPPE PEZZULLO",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "UNION STRUNZ FC"
+        },
+        {
+          "name": "Europa League",
+          "winner": "UNION STRUNZ FC"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "GUINNESS FC"
+        }
+      ]
+    },
+    {
+      "season": "2020/2021",
+      "champion": "LEONI INDOMABILI",
+      "championManager": "FRANCESCO TARANTINO",
+      "runnerUp": "CSK LA RISSA",
+      "runnerUpManager": "MICHELE MACRI'",
+      "third": "SENZA PADRONI FC",
+      "thirdManager": "LUIGI SCHIAVONE",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "GUINNESS FC"
+        },
+        {
+          "name": "Europa League",
+          "winner": "RICHVILLE"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "SENZA PADRONI FC"
+        }
+      ]
+    },
+    {
+      "season": "2021/2022",
+      "champion": "LEONI INDOMABILI",
+      "championManager": "FRANCESCO TARANTINO",
+      "runnerUp": "UNION STRUNZ FC",
+      "runnerUpManager": "GIUSEPPE PEZZULLO",
+      "third": "SENZA PADRONI FC",
+      "thirdManager": "LUIGI SCHIAVONE",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "UNION STRUNZ FC"
+        },
+        {
+          "name": "Europa League",
+          "winner": "ATLETICO SOLOPACA"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "LEONI INDOMABILI"
+        },
+        {
+          "name": "Conference League",
+          "winner": "SENZA PADRONI FC"
+        }
+      ]
+    },
+    {
+      "season": "2022/2023",
+      "champion": "ATLETICO SOLOPACA",
+      "championManager": "GENNARO PESCE",
+      "runnerUp": "UNION STRUNZ FC",
+      "runnerUpManager": "GIUSEPPE PEZZULLO",
+      "third": "DIVANO KIEV",
+      "thirdManager": "GIANLUIGI AUTARIELLO",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "UNION STRUNZ FC"
+        },
+        {
+          "name": "Europa League",
+          "winner": "PARTIZAN DEGRADO"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "RICHVILLE"
+        },
+        {
+          "name": "Conference League",
+          "winner": "SENZA PADRONI FC"
+        }
+      ]
+    },
+    {
+      "season": "2023/2024",
+      "champion": "I CUGINI DI BILANCIA",
+      "championManager": "DAVIDE INGLESI",
+      "runnerUp": "ATLETICO SOLOPACA",
+      "runnerUpManager": "GENNARO PESCE",
+      "third": "RICHVILLE",
+      "thirdManager": "GIANLUCA BRUNO",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "COCA JUNIOR"
+        },
+        {
+          "name": "Europa League",
+          "winner": "PARTIZAN DEGRADO"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "UNION STRUNZ FC"
+        },
+        {
+          "name": "Conference League",
+          "winner": "UNION STRUNZ FC"
+        }
+      ]
+    },
+    {
+      "season": "2024/2025",
+      "champion": "LEONI INDOMABILI",
+      "championManager": "FRANCESCO TARANTINO",
+      "runnerUp": "SENZA PADRONI FK",
+      "runnerUpManager": "LUIGI SCHIAVONE",
+      "third": "UNION STRUNZ FC",
+      "thirdManager": "GIUSEPPE PEZZULLO",
+      "competitions": [
+        {
+          "name": "Champions League",
+          "winner": "SENZA PADRONI FK"
+        },
+        {
+          "name": "Europa League",
+          "winner": "POGGIOREAL CLUB DE FUTBOL"
+        },
+        {
+          "name": "Coppa Italia",
+          "winner": "POGGIOREAL CLUB DE FUTBOL"
+        },
+        {
+          "name": "Conference League",
+          "winner": "HOUSE OF SQUIRT"
+        }
+      ]
+    }
+  ],
+  "generatedAt": "2025-08-22T22:00:19.979499"
+}

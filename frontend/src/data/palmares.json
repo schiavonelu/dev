@@ -1,0 +1,288 @@
+{
+  "palmares": [
+    {
+      "team": "LEONI INDOMABILI (Francesco Tarantino)",
+      "championships": 4,
+      "runnerUps": 0,
+      "thirds": 0,
+      "placements": 0,
+      "cupsTotal": 2,
+      "cups": {
+        "Europa League": 1,
+        "Coppa Italia": 1
+      }
+    },
+    {
+      "team": "ATLETICO SOLOPACA (Gennaro Pesce)",
+      "championships": 3,
+      "runnerUps": 1,
+      "thirds": 0,
+      "placements": 1,
+      "cupsTotal": 3,
+      "cups": {
+        "Europa League": 2,
+        "Champions League": 1
+      }
+    },
+    {
+      "team": "SENZA PADRONI FK (Luigi Schiavone)",
+      "championships": 2,
+      "runnerUps": 2,
+      "thirds": 3,
+      "placements": 5,
+      "cupsTotal": 12,
+      "cups": {
+        "Champions League": 3,
+        "Europa League": 3,
+        "Coppa Italia": 4,
+        "Conference League": 2
+      }
+    },
+    {
+      "team": "SADRACCA FC (Antonio Cardone)",
+      "championships": 1,
+      "runnerUps": 1,
+      "thirds": 0,
+      "placements": 1,
+      "cupsTotal": 1,
+      "cups": {
+        "Europa League": 1
+      }
+    },
+    {
+      "team": "DAMA FANTASOCCER (M.Trovato - D. Inglesi)",
+      "championships": 1,
+      "runnerUps": 0,
+      "thirds": 0,
+      "placements": 0,
+      "cupsTotal": 1,
+      "cups": {
+        "Champions League": 1
+      }
+    },
+    {
+      "team": "HOUSE OF SQUIRT (Andrea Soldati)",
+      "championships": 1,
+      "runnerUps": 0,
+      "thirds": 0,
+      "placements": 0,
+      "cupsTotal": 1,
+      "cups": {
+        "Conference League": 1
+      }
+    },
+    {
+      "team": "SCUGNIZZI UNITED (Antonio Petrellese)",
+      "championships": 1,
+      "runnerUps": 0,
+      "thirds": 0,
+      "placements": 0,
+      "cupsTotal": 0,
+      "cups": {}
+    },
+    {
+      "team": "VINTAGE FOOTBALL CLUB (G.Gerbino - S.Longo)",
+      "championships": 1,
+      "runnerUps": 0,
+      "thirds": 3,
+      "placements": 3,
+      "cupsTotal": 1,
+      "cups": {
+        "Champions League": 1
+      }
+    },
+    {
+      "team": "IRRIDUCIBILI AZERBAIJAN (Massiliano ZERBINI)",
+      "championships": 1,
+      "runnerUps": 0,
+      "thirds": 0,
+      "placements": 0,
+      "cupsTotal": 0,
+      "cups": {}
+    },
+    {
+      "team": "I CUGINI DI BILANCIA (R. Zollino - D. Inglesi)",
+      "championships": 1,
+      "runnerUps": 0,
+      "thirds": 0,
+      "placements": 0,
+      "cupsTotal": 0,
+      "cups": {}
+    },
+    {
+      "team": "UNION STRUNZ FC (Giuseppe Pezzullo)",
+      "championships": 0,
+      "runnerUps": 4,
+      "thirds": 4,
+      "placements": 8,
+      "cupsTotal": 10,
+      "cups": {
+        "Champions League": 5,
+        "Coppa Italia": 3,
+        "Europa League": 1,
+        "Conference League": 1
+      }
+    },
+    {
+      "team": "GUINNESS FC (Cristian Facioni)",
+      "championships": 0,
+      "runnerUps": 2,
+      "thirds": 1,
+      "placements": 3,
+      "cupsTotal": 4,
+      "cups": {
+        "Coppa Italia": 2,
+        "Europa League": 1,
+        "Champions League": 1
+      }
+    },
+    {
+      "team": "F C SANPA (Carlo Castellano)",
+      "championships": 0,
+      "runnerUps": 0,
+      "thirds": 1,
+      "placements": 1,
+      "cupsTotal": 3,
+      "cups": {
+        "Europa League": 1,
+        "Coppa Italia": 2
+      }
+    },
+    {
+      "team": "RICHVILLE (Gianluca Bruno)",
+      "championships": 0,
+      "runnerUps": 0,
+      "thirds": 1,
+      "placements": 1,
+      "cupsTotal": 2,
+      "cups": {
+        "Europa League": 1,
+        "Coppa Italia": 1
+      }
+    },
+    {
+      "team": "POGGIOREAL CLUB DE FUTBOL (Vittorio Marasco)",
+      "championships": 0,
+      "runnerUps": 0,
+      "thirds": 0,
+      "placements": 0,
+      "cupsTotal": 4,
+      "cups": {
+        "Europa League": 3,
+        "Coppa Italia": 1
+      }
+    },
+    {
+      "team": "ALIGUAI (Claudio Riello)",
+      "championships": 0,
+      "runnerUps": 1,
+      "thirds": 0,
+      "placements": 1,
+      "cupsTotal": 1,
+      "cups": {
+        "Coppa Italia": 1
+      }
+    },
+    {
+      "team": "IN MEMORY OF FILIPPO (Antonio Guerra)",
+      "championships": 0,
+      "runnerUps": 0,
+      "thirds": 1,
+      "placements": 1,
+      "cupsTotal": 1,
+      "cups": {
+        "Champions League": 1
+      }
+    },
+    {
+      "team": "VICENZA 2012 (Gianluca Di Pietro)",
+      "championships": 0,
+      "runnerUps": 0,
+      "thirds": 0,
+      "placements": 0,
+      "cupsTotal": 1,
+      "cups": {
+        "Champions League": 1
+      }
+    },
+    {
+      "team": "GAMBRINUS FD (Emilio Sacco)",
+      "championships": 0,
+      "runnerUps": 0,
+      "thirds": 0,
+      "placements": 0,
+      "cupsTotal": 1,
+      "cups": {
+        "Coppa Italia": 1
+      }
+    },
+    {
+      "team": "REALCOLIZZATI (Pietro Tamburrino)",
+      "championships": 0,
+      "runnerUps": 1,
+      "thirds": 0,
+      "placements": 1,
+      "cupsTotal": 1,
+      "cups": {
+        "Europa League": 1
+      }
+    },
+    {
+      "team": "ATLETICO MACRI (Michele Macri)",
+      "championships": 0,
+      "runnerUps": 1,
+      "thirds": 0,
+      "placements": 1,
+      "cupsTotal": 1,
+      "cups": {
+        "Champions League": 1
+      }
+    },
+    {
+      "team": "FENOMELANDIA (Mario Bellino)",
+      "championships": 0,
+      "runnerUps": 1,
+      "thirds": 0,
+      "placements": 1,
+      "cupsTotal": 0,
+      "cups": {}
+    },
+    {
+      "team": "NEW GAME (Francesco Di Pietro)",
+      "championships": 0,
+      "runnerUps": 1,
+      "thirds": 0,
+      "placements": 1,
+      "cupsTotal": 0,
+      "cups": {}
+    },
+    {
+      "team": "LONGOBARDA (Lindoro Umberto)",
+      "championships": 0,
+      "runnerUps": 0,
+      "thirds": 1,
+      "placements": 1,
+      "cupsTotal": 0,
+      "cups": {}
+    },
+    {
+      "team": "MANTUS (Giuseppe Prencipe)",
+      "championships": 0,
+      "runnerUps": 1,
+      "thirds": 0,
+      "placements": 1,
+      "cupsTotal": 0,
+      "cups": {}
+    },
+    {
+      "team": "DIVANO KIEV (Gianluigi Autariello)",
+      "championships": 0,
+      "runnerUps": 0,
+      "thirds": 1,
+      "placements": 1,
+      "cupsTotal": 0,
+      "cups": {}
+    }
+  ]
+}
+  

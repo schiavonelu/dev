@@ -1,0 +1,362 @@
+[
+  {
+    "g": 1,
+    "campionato": "3° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "1° Torneo Intermedio - 1G"
+  },
+  {
+    "g": 2,
+    "campionato": "4° Giornata",
+    "uefa": "Girone - 1G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "1° Torneo Intermedio - 2G"
+  },
+  {
+    "g": 3,
+    "campionato": "5° Giornata",
+    "uefa": "Girone - 2G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "1° Torneo Intermedio - 3G"
+  },
+  {
+    "g": 4,
+    "campionato": "6° Giornata",
+    "uefa": "Girone - 3G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Playoff - 1G",
+    "ti": "1° Torneo Intermedio - 4G"
+  },
+  {
+    "g": 5,
+    "campionato": "7° Giornata",
+    "uefa": "Girone - 4G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Playoff - 2G",
+    "ti": "1° Torneo Intermedio - 5G"
+  },
+  {
+    "g": 6,
+    "campionato": "8° Giornata",
+    "uefa": "Girone - 5G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Playoff - 3G",
+    "ti": "1° Torneo Intermedio - 6G"
+  },
+  {
+    "g": 7,
+    "campionato": "9° Giornata",
+    "uefa": "Girone - 6G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Playoff - 4G",
+    "ti": "1° Torneo Intermedio - 7G"
+  },
+  {
+    "g": 8,
+    "campionato": "10° Giornata",
+    "uefa": "Girone - 7G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Playoff - 5G",
+    "ti": "1° Torneo Intermedio - 8G"
+  },
+  {
+    "g": 9,
+    "campionato": "11° Giornata",
+    "uefa": "Girone - 8G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Playoff - 6G",
+    "ti": "1° Torneo Intermedio - FINALE"
+  },
+  {
+    "g": 10,
+    "campionato": "12° Giornata",
+    "uefa": "Girone - 9G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Playoff - 7G",
+    "ti": "2° Torneo Intermedio - 1G"
+  },
+  {
+    "g": 11,
+    "campionato": "13° Giornata",
+    "uefa": "Girone - 10G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Playoff - 8G",
+    "ti": "2° Torneo Intermedio - 2G"
+  },
+  {
+    "g": 12,
+    "campionato": "14° Giornata",
+    "uefa": "Girone - 11G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Playoff - 9G",
+    "ti": "2° Torneo Intermedio - 3G"
+  },
+  {
+    "g": 13,
+    "campionato": "15° Giornata",
+    "uefa": "Girone - 12G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Playoff - 10G",
+    "ti": "2° Torneo Intermedio - 4G"
+  },
+  {
+    "g": 14,
+    "campionato": "16° Giornata",
+    "uefa": "Girone - 13G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "2° Torneo Intermedio - 5G"
+  },
+  {
+    "g": 15,
+    "campionato": "17° Giornata",
+    "uefa": "Girone - 14G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "2° Torneo Intermedio - 6G"
+  },
+  {
+    "g": 16,
+    "campionato": "18° Giornata",
+    "uefa": "Girone - 15G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "2° Torneo Intermedio - 7G"
+  },
+  {
+    "g": 17,
+    "campionato": "19° Giornata",
+    "uefa": "Girone - 16G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "2° Torneo Intermedio - 8G"
+  },
+  {
+    "g": 18,
+    "campionato": "20° Giornata",
+    "uefa": "Girone - 17G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "2° Torneo Intermedio - FINALE"
+  },
+  {
+    "g": 19,
+    "campionato": "21° Giornata",
+    "uefa": "Girone - 18G",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "3° Torneo Intermedio - 1G"
+  },
+  {
+    "g": 20,
+    "campionato": "22° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Quarti Andata",
+    "ti": "3° Torneo Intermedio - 2G"
+  },
+  {
+    "g": 21,
+    "campionato": "23° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "3° Torneo Intermedio - 3G"
+  },
+  {
+    "g": 22,
+    "campionato": "24° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Quarti Ritorno",
+    "ti": "3° Torneo Intermedio - 4G"
+  },
+  {
+    "g": 23,
+    "campionato": "25° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "3° Torneo Intermedio - 5G"
+  },
+  {
+    "g": 24,
+    "campionato": "26° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Semifinali Andata",
+    "ti": "3° Torneo Intermedio - 6G"
+  },
+  {
+    "g": 25,
+    "campionato": "27° Giornata",
+    "uefa": "",
+    "ucl": "Semifinali Andata",
+    "el": "Semifinali Andata",
+    "conf": "",
+    "coppa": "",
+    "ti": "3° Torneo Intermedio - 7G"
+  },
+  {
+    "g": 26,
+    "campionato": "28° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "Semifinali Ritorno",
+    "ti": "3° Torneo Intermedio - 8G"
+  },
+  {
+    "g": 27,
+    "campionato": "29° Giornata",
+    "uefa": "",
+    "ucl": "Semifinali Ritorno",
+    "el": "Semifinali Ritorno",
+    "conf": "",
+    "coppa": "",
+    "ti": "3° Torneo Intermedio - FINALE"
+  },
+  {
+    "g": 28,
+    "campionato": "30° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "Playoff Andata",
+    "coppa": "",
+    "ti": "4° Torneo Intermedio - 1G"
+  },
+  {
+    "g": 29,
+    "campionato": "31° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "Playoff Ritorno",
+    "coppa": "",
+    "ti": "4° Torneo Intermedio - 2G"
+  },
+  {
+    "g": 30,
+    "campionato": "32° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "FINALE",
+    "conf": "Semifinali Andata",
+    "coppa": "",
+    "ti": "4° Torneo Intermedio - 3G"
+  },
+  {
+    "g": 31,
+    "campionato": "33° Giornata",
+    "uefa": "",
+    "ucl": "FINALE",
+    "el": "",
+    "conf": "Semifinali Ritorno",
+    "coppa": "",
+    "ti": "4° Torneo Intermedio - 4G"
+  },
+  {
+    "g": 32,
+    "campionato": "34° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "FINALE",
+    "ti": "4° Torneo Intermedio - 5G"
+  },
+  {
+    "g": 33,
+    "campionato": "35° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "FINALE",
+    "coppa": "",
+    "ti": "4° Torneo Intermedio - 6G"
+  },
+  {
+    "g": 34,
+    "campionato": "36° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "4° Torneo Intermedio - 7G"
+  },
+  {
+    "g": 35,
+    "campionato": "37° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "4° Torneo Intermedio - 8G"
+  },
+  {
+    "g": 36,
+    "campionato": "38° Giornata",
+    "uefa": "",
+    "ucl": "",
+    "el": "",
+    "conf": "",
+    "coppa": "",
+    "ti": "4° Torneo Intermedio - FINALE"
+  }
+]
