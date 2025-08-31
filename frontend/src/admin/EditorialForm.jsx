@@ -15,6 +15,46 @@ const init = {
 const autoSlug = (s="") =>
   s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");
 
+// Converter per l’anteprima nel form (Markdown/BBCode -> HTML)
+const escapeHtml = (s="") =>
+  s.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;");
+
+function lightMarkdownToHtml(src=""){
+  if(!src) return "";
+  let t = String(src).replace(/\r\n/g,"\n");
+
+  // --- separatore
+  t = t.replace(/^\s*---\s*$/gm,"<hr />");
+
+  // --- titoli
+  t = t.replace(/^###\s+(.+)$/gm,"<h3>$1</h3>");
+  t = t.replace(/^##\s+(.+)$/gm,"<h2>$1</h2>");
+  t = t.replace(/^#\s+(.+)$/gm,"<h1>$1</h1>");
+
+  // --- liste puntate
+  t = t.replace(/(?:^(?:-|\*)\s+.+(?:\n|$))+?/gm,(b)=>`<ul>${
+    b.trim().split(/\n/).map(l=>l.replace(/^(?:-|\*)\s+/,"").trim()).filter(Boolean).map(li=>`<li>${li}</li>`).join("")
+  }</ul>`);
+
+  // --- inline bold/italic + BBCode
+  t = t.replace(/\*\*(.+?)\*\*/g,"<strong>$1</strong>")
+       .replace(/__(.+?)__/g,"<strong>$1</strong>")
+       .replace(/\*(.+?)\*/g,"<em>$1</em>")
+       .replace(/_(.+?)_/g,"<em>$1</em>")
+       .replace(/\[b\](.+?)\[\/b\]/g,"<strong>$1</strong>")
+       .replace(/\[i\](.+?)\[\/i\]/g,"<em>$1</em>");
+
+  // --- link
+  t = t.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+    `<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>`);
+
+  // --- paragrafi
+  const blocks = t.split(/\n\n+/).map(b=>b.trim()).filter(Boolean)
+    .map(b=>/^(<h\d|<ul|<hr|<p|<blockquote|<img|<figure)/.test(b)?b:`<p>${b}</p>`);
+
+  return blocks.join("\n");
+}
+
 export default function EditorialForm({ editing, onCancel, onSaved }) {
   const [form, setForm] = useState(init);
   const [saving, setSaving] = useState(false);
@@ -64,6 +104,15 @@ export default function EditorialForm({ editing, onCancel, onSaved }) {
     } finally { setSaving(false); }
   }
 
+  // HTML per anteprima (senza toccare cosa salvi: il DB conserva il body com’è)
+  const previewBodyHtml = (/<\w+[^>]*>/.test(form.body)
+    ? form.body
+    : lightMarkdownToHtml(escapeHtml(form.body || "")));
+
+  const previewExcerptHtml = (/<\w+[^>]*>/.test(form.excerpt)
+    ? form.excerpt
+    : lightMarkdownToHtml(escapeHtml(form.excerpt || "")));
+
   return (
     <>
       <section className="space-y-3">
@@ -85,18 +134,22 @@ export default function EditorialForm({ editing, onCancel, onSaved }) {
               <input className="input" name="slug" placeholder="Slug (auto se vuoto)" value={form.slug || ""} onChange={onChange} />
               <input className="input" name="badge" placeholder="Badge" value={form.badge} onChange={onChange} />
             </div>
+
             <input className="input" name="backgroundUrl" placeholder="Background URL (immagine consigliata larga)" value={form.backgroundUrl} onChange={onChange} />
             <input className="input" name="coverUrl" placeholder="Cover URL (fallback)" value={form.coverUrl} onChange={onChange} />
+
             <textarea className="textarea" rows={3} name="excerpt" placeholder="Estratto" value={form.excerpt} onChange={onChange} />
 
             <div>
               <div className="flex items-center justify-between">
-                <label className="block text-sm font-medium text-gray-700">Body (HTML semplice)</label>
+                <label className="block text-sm font-medium text-gray-700">Body (HTML o Markdown leggero)</label>
                 <span className="inline-flex items-center gap-1 text-xs text-gray-500">
                   <Clock size={14}/>{' '}~{calcReading(form.body)} min lettura
                 </span>
               </div>
               <textarea className="textarea mt-1" rows={10} name="body" placeholder="<p>Contenuto…</p>" value={form.body} onChange={onChange} />
+              <div className="prose max-w-none mt-2 p-3 bg-gray-50 border rounded-lg"
+                   dangerouslySetInnerHTML={{ __html: previewBodyHtml || "<p class='text-gray-500'>Anteprima…</p>" }} />
             </div>
 
             <label className="flex items-center gap-2 text-sm">
@@ -127,7 +180,8 @@ export default function EditorialForm({ editing, onCancel, onSaved }) {
                 </div>
               </div>
               <div className="p-3 text-sm">
-                <div className="text-gray-600 line-clamp-2">{form.excerpt}</div>
+                <div className="text-gray-600 line-clamp-2"
+                     dangerouslySetInnerHTML={{ __html: previewExcerptHtml }} />
               </div>
             </div>
           </div>
@@ -146,4 +200,6 @@ export default function EditorialForm({ editing, onCancel, onSaved }) {
     </>
   );
 }
+
+
 

@@ -333,7 +333,7 @@ export default function Article(){
 
               {/* Sottotitolo */}
               {art.subtitle ? (
-                <h2 className="text-lg sm:text-xl font-semibold text-gray-700 mb-4">
+                <h2 className="text-lg sm:text-xl font-semibold text-gray-700 mb-4 text-justify">
                   {art.subtitle}
                 </h2>
               ) : null}
@@ -361,7 +361,7 @@ export default function Article(){
 
               {/* Estratto */}
               {art.excerpt ? (
-                <p className="text-[15px] text-gray-800 mb-6 bg-gray-50/70 border border-gray-200 rounded-xl p-4">
+                <p className="text-[15px] text-gray-800 mb-6 bg-gray-50/70 border border-gray-200 rounded-xl p-4 text-justify">
                   {art.excerpt}
                 </p>
               ) : null}

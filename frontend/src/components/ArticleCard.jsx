@@ -37,8 +37,8 @@ export default function ArticleCard({ a }){
       </div>
 
       <div className="p-4 space-y-2">
-        <h3 className="text-lg font-bold line-clamp-2">{a.title || a.titolo}</h3>
-        <p className="text-sm text-gray-600 line-clamp-3">{a.excerpt || a.estratto}</p>
+        <h3 className="text-lg font-bold line-clamp-2 text-justify">{a.title || a.titolo}</h3>
+        <p className="text-sm text-gray-600 line-clamp-3 text-justify">{a.excerpt || a.estratto}</p>
 
         <div className="flex items-center justify-end pt-1">
           <Link

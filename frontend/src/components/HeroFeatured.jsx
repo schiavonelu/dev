@@ -23,7 +23,7 @@ export default function HeroFeatured({ a }) {
   const cover = a.cover || a.coverUrl;
 
   return (
-    <Link to={to} className="block group rounded-2xl overflow-hidden relative shadow-lg">
+    <Link to={to} className="block group rounded-2xl overflow-hidden relative shadow-lg text-justify">
       {cover ? (
         <img
           src={cover}

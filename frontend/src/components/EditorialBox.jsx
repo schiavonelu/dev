@@ -16,7 +16,7 @@ export default function EditorialBox({
   href = "/articoli",
   badge = "Editoriale",
   backgroundUrl = "",
-  author = { name: "Redazione", avatarUrl: "" },
+  author = { name: "Redazione Carogna League", avatarUrl: "" },
   publishedAt = Date.now(),
   readingMinutes = 3,
   showCTA = true, // ⬅️ NEW
@@ -43,9 +43,9 @@ export default function EditorialBox({
               </span>
             ) : null}
 
-            <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-black leading-tight">{title}</h2>
-            {subtitle && <p className="mt-1 text-lg sm:text-xl text-white/90 font-semibold">{subtitle}</p>}
-            {excerpt && <p className="mt-4 text-sm sm:text-base text-white/90 max-w-3xl">{excerpt}</p>}
+            <h2 className="mt-3 text-2xl sm:text-3xl lg:text-4xl font-black leading-tight text-justify">{title}</h2>
+            {subtitle && <p className="mt-1 text-lg sm:text-xl text-white/90 font-semibold text-justify">{subtitle}</p>}
+            {excerpt && <p className="mt-4 text-sm sm:text-base text-white/90 max-w-3xl text-justify">{excerpt}</p>}
 
             <div className="mt-5 flex flex-wrap items-center gap-4 text-white/85">
               {(author?.name || author?.avatarUrl) && (
