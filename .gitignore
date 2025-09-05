@@ -1,4 +1,37 @@
-backend/.env
-frontend/.env
+# --- Generale / Node ---
 node_modules/
+*.log
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.vercel/
+.vercel_build_output/
+dist/
+build/
+.cache/
+coverage/
+
+# --- Next.js (frontend) ---
+.next/
+out/
+
+# --- Env (root + sottocartelle) ---
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.*
+!frontend/.env.example
+backend/.env
+backend/.env.*
+!backend/.env.example
+
+# --- Credenziali / chiavi locali ---
 backend/sa.json
+
+# --- Sistemi vari ---
+.DS_Store
+Thumbs.db
+
+
