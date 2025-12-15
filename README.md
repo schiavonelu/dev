@@ -21,10 +21,10 @@ Configure the following in Render (Dashboard → Environment):
 - Keep `ALLOW_DEBUG_SEED` at `0` in production.
 
 #### MongoDB & LegheFantacalcio
-- `MONGODB_URI` – required, connection string (e.g. MongoDB Atlas) with database `carognaleague`.
-- `MONGODB_DB` – optional, override the database name if your URI doesn’t specify it.
+- `MONGODB_URI` – required, connection string (e.g. MongoDB Atlas) with database `carognaleague` (the example uses `mongodb+srv://schiavonelu85:ls2T6Hxzd4LsgO3T@dbpepochef.7x6py.mongodb.net/?appName=dbPepoChef`).
+- `MONGODB_DB` – optional, override the database name if your URI doesn’t specify it (defaults to `carognaleague`).
 - `LEGHE_BASE_URL` – defaults to `https://leghe.fantacalcio.it`; set it if you use a mirror.
-- `LEGHE_PATH` – defaults to `/carogna-league`; set the path of your league so standings and results are scraped correctly.
+- `LEGHE_PATH` – defaults to `/<LEAGUE_SLUG>` so with the provided slug it targets `/carogna-league`; override if your league lives elsewhere.
 
 On first boot the backend now:
 - connects to MongoDB using the name above (or the one in the URI);

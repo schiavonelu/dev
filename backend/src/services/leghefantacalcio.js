@@ -2,7 +2,8 @@ import axios from 'axios';
 import cheerio from 'cheerio';
 
 const BASE_URL = process.env.LEGHE_BASE_URL || 'https://leghe.fantacalcio.it';
-const LEAGUE_PATH = process.env.LEGHE_PATH || '/carogna-league';
+const LEAGUE_SLUG = process.env.LEAGUE_SLUG || 'carogna-league';
+const LEAGUE_PATH = process.env.LEGHE_PATH || `/${LEAGUE_SLUG}`;
 
 const toNumber = (value) => {
   if (value === undefined || value === null) return 0;

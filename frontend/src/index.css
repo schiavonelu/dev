@@ -104,6 +104,11 @@ body { background: var(--fc-bg); color: var(--fc-text); }
 .prose a { color: var(--fc-primary); }
 
 /* ───────────────────────── NAV / FOOTER LINKS ───────────────────────────── */
+.site-header {
+  background: linear-gradient(115deg, color-mix(in hsl, var(--fc-primary) 92%, #0a2555), color-mix(in hsl, var(--fc-accent) 88%, #075a3a));
+  box-shadow: 0 8px 22px rgba(10, 74, 163, 0.25);
+}
+
 .nav-link {
   @apply px-3 py-2 rounded-lg text-sm font-semibold transition;
   text-decoration: none;
@@ -118,6 +123,19 @@ body { background: var(--fc-bg); color: var(--fc-text); }
 .nav-link-active {
   color: #fff;
   background: var(--fc-primary);
+}
+
+.nav-link-inverted {
+  color: rgba(255,255,255,.92);
+}
+.nav-link-inverted:hover {
+  background: rgba(255,255,255,.16);
+  color: #fff;
+}
+.nav-link-inverted.nav-link-active {
+  background: rgba(255,255,255,.24);
+  color: #fff;
+  box-shadow: 0 4px 16px rgba(0,0,0,.12);
 }
 
 .footer-link {
