@@ -20,6 +20,13 @@ Configure the following in Render (Dashboard → Environment):
 - `ADMIN_EMAILS`, `ADMIN_TOKEN`, `LEAGUE_SLUG`, `PUBLIC_URL`, and any other existing secrets the API already uses.
 - Keep `ALLOW_DEBUG_SEED` at `0` in production.
 
+#### MongoDB & LegheFantacalcio
+- `MONGODB_URI` – required, connection string (e.g. MongoDB Atlas) with database `carognaleague`.
+- `LEGHE_BASE_URL` – defaults to `https://leghe.fantacalcio.it`; set it if you use a mirror.
+- `LEGHE_PATH` – defaults to `/carogna-league`; set the path of your league so standings and results are scraped correctly.
+
+On first boot the backend will connect to Mongo and, if the collections are empty, will scrape `leghefantacalcio.it` to fill standings and results automatically. Hit `GET /api/_debug/seed-articles` locally with `ALLOW_DEBUG_SEED=1` to insert a demo article and verify that `articles` are persisted in Mongo.
+
 ## Frontend deployment on Netlify
 1. Push your branch to GitHub.
 2. In Netlify, create a new site from Git and pick this repository.

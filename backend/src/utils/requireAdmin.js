@@ -7,6 +7,8 @@ export async function requireAdmin(req, res, next) {
     const token = authHeader.startsWith('Bearer ') ? authHeader.slice(7) : null;
     if (!token) return res.status(401).json({ error: 'Missing Bearer token' });
 
+    if (!authAdmin) return res.status(503).json({ error: 'Firebase admin non configurato' });
+
     const decoded = await authAdmin.verifyIdToken(token, true);
     const email = (decoded.email || '').toLowerCase();
     const whitelist = (process.env.ADMIN_EMAILS || '')

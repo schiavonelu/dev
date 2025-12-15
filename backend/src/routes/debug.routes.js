@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { firestore } from '../utils/firebase.js';
+import Article from '../models/Article.js';
 
 const router = Router();
 
@@ -22,12 +22,22 @@ router.get('/seed-articles', async (req, res) => {
       return res.status(403).json({ error: 'Debug seed disabilitato. Metti ALLOW_DEBUG_SEED=1 nel .env' });
     }
     const now = Date.now();
-    const sample = [ /* ... (articoli demo come già inviati) ... */ ];
+    const sample = [
+      {
+        slug: 'benvenuti-nel-carogna-league',
+        title: 'Benvenuti nel Carogna League',
+        excerpt: 'Demo di articolo per popolare il DB Mongo.',
+        body: 'Questo è un esempio di articolo creato automaticamente per verificare la pipeline.',
+        cover: '',
+        author: 'Redazione',
+        tags: ['demo'],
+        published: true,
+        publishedAt: now,
+        createdAt: now,
+      },
+    ];
 
-    const batch = firestore.batch();
-    const col = firestore.collection('articles');
-    for (const a of sample) batch.set(col.doc(a.slug), a, { merge: false });
-    await batch.commit();
+    await Article.insertMany(sample);
 
     res.json({ ok: true, inserted: sample.length });
   } catch (e) {

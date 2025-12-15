@@ -1,5 +1,5 @@
 // backend/controllers/editorials.controller.js
-import { firestore as db } from "../../src/utils/firebase.js"; // ⬅️ adatta il path se serve
+import { firestore as db } from "../utils/firebase.js";
 
 const nowMs = () => Date.now();
 const toNumber = (v, d = 0) => (isNaN(parseInt(v, 10)) ? d : parseInt(v, 10));
@@ -13,6 +13,7 @@ const COL = "editorials";
 
 export async function list(req, res) {
   try {
+    if (!db) return res.status(503).json({ error: 'Firebase non configurato per gli editoriali' });
     const page = Math.max(1, toNumber(req.query.page, 1));
     const pageSize = Math.min(100, Math.max(1, toNumber(req.query.pageSize, 20)));
     const publishedOnly = !!req.query.published;
@@ -42,6 +43,7 @@ export async function list(req, res) {
 
 export async function getByIdOrSlug(req, res) {
   try {
+    if (!db) return res.status(503).json({ error: 'Firebase non configurato per gli editoriali' });
     const { idOrSlug } = req.params;
     const byId = await db.collection(COL).doc(idOrSlug).get();
     if (byId.exists) return res.json({ id: byId.id, _id: byId.id, ...byId.data() });
@@ -60,6 +62,7 @@ export async function getByIdOrSlug(req, res) {
 
 export async function create(req, res) {
   try {
+    if (!db) return res.status(503).json({ error: 'Firebase non configurato per gli editoriali' });
     const p = req.body || {};
     let data = {
       title: p.title?.trim(),
@@ -98,6 +101,7 @@ export async function create(req, res) {
 
 export async function update(req, res) {
   try {
+    if (!db) return res.status(503).json({ error: 'Firebase non configurato per gli editoriali' });
     const { idOrSlug } = req.params;
     let ref = db.collection(COL).doc(idOrSlug);
     let doc = await ref.get();
@@ -134,6 +138,7 @@ export async function update(req, res) {
 
 export async function remove(req, res) {
   try {
+    if (!db) return res.status(503).json({ error: 'Firebase non configurato per gli editoriali' });
     const { idOrSlug } = req.params;
     let ref = db.collection(COL).doc(idOrSlug);
     let doc = await ref.get();

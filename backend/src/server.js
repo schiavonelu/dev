@@ -4,6 +4,7 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { startCronJobs } from './jobs/index.js';
+import { connectDB } from './utils/db.js';
 
 import standingsRoutes   from './routes/standings.routes.js';
 import resultsRoutes     from './routes/results.routes.js';
@@ -15,6 +16,14 @@ import editorialsRoutes  from './routes/editorials.routes.js'; // ⬅️ AGGIUNT
 
 const app = express();
 app.set('trust proxy', 1);
+
+// DB -----------------------------------------------------------
+try {
+  await connectDB(process.env.MONGODB_URI);
+} catch (e) {
+  console.error('[mongo] connessione fallita:', e.message);
+  process.exit(1);
+}
 
 const normalizeOrigin = (value) => value?.replace(/\/+$/, '');
 const allowedOrigins = (process.env.ALLOWED_ORIGINS || '')
