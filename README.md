@@ -22,10 +22,14 @@ Configure the following in Render (Dashboard → Environment):
 
 #### MongoDB & LegheFantacalcio
 - `MONGODB_URI` – required, connection string (e.g. MongoDB Atlas) with database `carognaleague`.
+- `MONGODB_DB` – optional, override the database name if your URI doesn’t specify it.
 - `LEGHE_BASE_URL` – defaults to `https://leghe.fantacalcio.it`; set it if you use a mirror.
 - `LEGHE_PATH` – defaults to `/carogna-league`; set the path of your league so standings and results are scraped correctly.
 
-On first boot the backend will connect to Mongo and, if the collections are empty, will scrape `leghefantacalcio.it` to fill standings and results automatically. Hit `GET /api/_debug/seed-articles` locally with `ALLOW_DEBUG_SEED=1` to insert a demo article and verify that `articles` are persisted in Mongo.
+On first boot the backend now:
+- connects to MongoDB using the name above (or the one in the URI);
+- seeds a welcome article if the collection is empty so the frontend has content immediately;
+- scrapes `leghefantacalcio.it` to fill standings and results automatically when their collections are empty.
 
 ## Frontend deployment on Netlify
 1. Push your branch to GitHub.

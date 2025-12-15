@@ -5,6 +5,7 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import { startCronJobs } from './jobs/index.js';
 import { connectDB } from './utils/db.js';
+import { bootstrapDatabase } from './utils/bootstrap.js';
 
 import standingsRoutes   from './routes/standings.routes.js';
 import resultsRoutes     from './routes/results.routes.js';
@@ -23,6 +24,14 @@ try {
 } catch (e) {
   console.error('[mongo] connessione fallita:', e.message);
   process.exit(1);
+}
+
+// bootstrap iniziale per chi crea ora il DB
+try {
+  const seeded = await bootstrapDatabase();
+  console.log('[bootstrap] completato', seeded);
+} catch (e) {
+  console.warn('[bootstrap] fallito:', e.message);
 }
 
 const normalizeOrigin = (value) => value?.replace(/\/+$/, '');
