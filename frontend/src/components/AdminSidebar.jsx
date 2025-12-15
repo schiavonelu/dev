@@ -1,19 +1,33 @@
 // src/components/AdminSidebar.jsx
 import { FilePlus2, List as ListIcon, PenLine, Newspaper, ChevronLeft, ChevronRight } from "lucide-react";
 
-export default function AdminSidebar({ expanded, setExpanded, section, setSection }) {
-  const link = (key, label, Icon) => (
+function SidebarLink({ active, expanded, label, icon, onClick }) {
+  const IconComponent = icon;
+  return (
     <button
-      onClick={() => setSection(key)}
+      onClick={onClick}
       className={`w-full text-left px-3 py-2 rounded-lg transition flex items-center gap-2 ${
-        section === key ? "bg-[color:var(--fc-primary)] text-white" : "hover:bg-gray-100"
+        active ? "bg-[color:var(--fc-primary)] text-white" : "hover:bg-gray-100"
       } ${expanded ? "justify-start" : "justify-center"}`}
       title={label}
       aria-label={label}
     >
-      <Icon size={18} />
+      <IconComponent size={18} />
       {expanded && <span className="truncate">{label}</span>}
     </button>
+  );
+}
+
+export default function AdminSidebar({ expanded, setExpanded, section, setSection }) {
+  const link = (key, label, Icon) => (
+    <SidebarLink
+      key={key}
+      active={section === key}
+      expanded={expanded}
+      label={label}
+      icon={Icon}
+      onClick={() => setSection(key)}
+    />
   );
 
   return (

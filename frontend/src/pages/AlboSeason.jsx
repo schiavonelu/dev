@@ -11,8 +11,14 @@ const fromSlug = (s) => String(s).replaceAll("-", "/");
 export default function AlboSeason(){
   const { season: slug } = useParams();
   const seasonKey = fromSlug(slug || "");
-  const seasons = Array.isArray(seasonsData?.seasons) ? seasonsData.seasons : [];
-  const data = useMemo(()=> seasons.find(s => String(s.season) === String(seasonKey)), [seasons, seasonKey]);
+  const seasons = useMemo(
+    () => (Array.isArray(seasonsData?.seasons) ? seasonsData.seasons : []),
+    []
+  );
+  const data = useMemo(
+    () => seasons.find((s) => String(s.season) === String(seasonKey)),
+    [seasons, seasonKey]
+  );
 
   if (!data) return <Navigate to="/albo-d-oro" replace />;
 

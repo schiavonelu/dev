@@ -192,14 +192,18 @@ export default function Article(){
         setCopied(true);
         setTimeout(() => setCopied(false), 1600);
       }
-    } catch {}
+    } catch (err) {
+      console.error("Impossibile condividere il link", err);
+    }
   };
   const handleCopyLink = async () => {
     try {
       await navigator.clipboard.writeText(window.location.href);
       setCopied(true);
       setTimeout(() => setCopied(false), 1600);
-    } catch {}
+    } catch (err) {
+      console.error("Impossibile copiare il link", err);
+    }
   };
 
   return (

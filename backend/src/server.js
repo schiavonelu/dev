@@ -16,10 +16,21 @@ import editorialsRoutes  from './routes/editorials.routes.js'; // ⬅️ AGGIUNT
 const app = express();
 app.set('trust proxy', 1);
 
+const normalizeOrigin = (value) => value?.replace(/\/+$/, '');
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || '')
+  .split(',')
+  .map((v) => normalizeOrigin(v.trim()))
+  .filter(Boolean);
+
 app.use(cors({
   origin: (origin, cb) => {
     if (!origin) return cb(null, true);
-    if (/^https?:\/\/localhost(:\d+)?$/.test(origin) || /\.app\.github\.dev$/.test(origin)) return cb(null, true);
+
+    const normalized = normalizeOrigin(origin);
+    const isLocal = /^https?:\/\/localhost(:\d+)?$/.test(normalized) || /\.app\.github\.dev$/.test(normalized);
+    const isEnvAllowed = allowedOrigins.some((allowed) => allowed === normalized);
+
+    if (isLocal || isEnvAllowed) return cb(null, true);
     cb(new Error('Not allowed by CORS'));
   },
   credentials: true,

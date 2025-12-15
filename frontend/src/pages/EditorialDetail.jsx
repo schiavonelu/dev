@@ -8,13 +8,6 @@ import EditorialBox from "../components/EditorialBox";
 import Breadcrumbs from "../components/Breadcrumbs";
 import { Home, Newspaper, FileText } from "lucide-react";
 
-function formatDate(ts) {
-  if (!ts) return "";
-  try {
-    return new Date(Number(ts)).toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit", year: "numeric" });
-  } catch { return ""; }
-}
-
 // --- Markdown/BBCode leggero -> HTML (come Article.jsx) ---
 const escapeHtml = (s = "") =>
   s.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");

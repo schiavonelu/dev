@@ -14,7 +14,7 @@ function makePages(page, totalPages, max = 7) {
   return out;
 }
 
-export default function Pagination({ page, totalPages, onChange, total = 0, pageSize = 9 }) {
+export default function Pagination({ page, totalPages, onChange }) {
   const pages = makePages(page, Math.max(1, totalPages||1));
   return (
     <div className="mt-6 flex items-center justify-center">

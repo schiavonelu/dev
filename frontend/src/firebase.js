@@ -25,6 +25,8 @@ export async function initAnalytics() {
   try {
     const { isSupported, getAnalytics } = await import("firebase/analytics");
     if (await isSupported()) return getAnalytics(app);
-  } catch {}
+  } catch (err) {
+    console.warn("[firebase] analytics not available", err?.message || err);
+  }
   return null;
 }
