@@ -8,7 +8,8 @@ import Spinner from "../components/Spinner";
 import { LogOut } from "lucide-react";
 
 // nuovi componenti
-import ArticleForm, { initArticle, apiToUi as apiToUiArticle } from "../admin/ArticleForm";
+import ArticleForm from "../admin/ArticleForm";
+import { initArticle } from "../admin/articleUtils";
 import ArticleList from "../admin/ArticleList";
 
 // SEZIONI aggiuntive editoriali (se già implementate altrove):

@@ -1,7 +1,7 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { api } from "../api/client";
 import { Pencil, Trash2, RotateCw, Clock, Tag, Search } from "lucide-react";
-import { apiToUi } from "./ArticleForm";
+import { apiToUi } from "./articleUtils";
 import Modal from "../components/Modal";
 
 const PAGE_SIZE = 9;
@@ -22,11 +22,17 @@ export default function ArticleList({ onNew, onEdit, onPreview }) {
 
   // Modal
   const [modal, setModal] = useState({ show: false, title: "", content: null, mode: "alert", onConfirm: null });
-  const openAlert = (title, content) => setModal({ show: true, title, content, mode: "alert", onConfirm: null });
-  const openConfirm = (title, content, onConfirm) => setModal({ show: true, title, content, mode: "confirm", onConfirm });
-  const closeModal = () => setModal((m) => ({ ...m, show: false, onConfirm: null }));
+  const openAlert = useCallback(
+    (title, content) => setModal({ show: true, title, content, mode: "alert", onConfirm: null }),
+    []
+  );
+  const openConfirm = useCallback(
+    (title, content, onConfirm) => setModal({ show: true, title, content, mode: "confirm", onConfirm }),
+    []
+  );
+  const closeModal = useCallback(() => setModal((m) => ({ ...m, show: false, onConfirm: null })), []);
 
-  async function fetchList(p = 1, query = "") {
+  const fetchList = useCallback(async (p = 1, query = "") => {
     setLoadingList(true);
     try {
       const r = await api.get("/api/articles", { params: { page: p, pageSize: PAGE_SIZE, q: query } });
@@ -39,9 +45,9 @@ export default function ArticleList({ onNew, onEdit, onPreview }) {
     } finally {
       setLoadingList(false);
     }
-  }
+  }, [openAlert]);
 
-  useEffect(() => { fetchList(1, ""); }, []);
+  useEffect(() => { fetchList(1, ""); }, [fetchList]);
 
   async function del(a) {
     openConfirm(

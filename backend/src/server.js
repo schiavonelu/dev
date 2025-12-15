@@ -4,6 +4,8 @@ import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import { startCronJobs } from './jobs/index.js';
+import { connectDB } from './utils/db.js';
+import { bootstrapDatabase } from './utils/bootstrap.js';
 
 import standingsRoutes   from './routes/standings.routes.js';
 import resultsRoutes     from './routes/results.routes.js';
@@ -16,10 +18,37 @@ import editorialsRoutes  from './routes/editorials.routes.js'; // ⬅️ AGGIUNT
 const app = express();
 app.set('trust proxy', 1);
 
+// DB -----------------------------------------------------------
+try {
+  await connectDB(process.env.MONGODB_URI);
+} catch (e) {
+  console.error('[mongo] connessione fallita:', e.message);
+  process.exit(1);
+}
+
+// bootstrap iniziale per chi crea ora il DB
+try {
+  const seeded = await bootstrapDatabase();
+  console.log('[bootstrap] completato', seeded);
+} catch (e) {
+  console.warn('[bootstrap] fallito:', e.message);
+}
+
+const normalizeOrigin = (value) => value?.replace(/\/+$/, '');
+const allowedOrigins = (process.env.ALLOWED_ORIGINS || '')
+  .split(',')
+  .map((v) => normalizeOrigin(v.trim()))
+  .filter(Boolean);
+
 app.use(cors({
   origin: (origin, cb) => {
     if (!origin) return cb(null, true);
-    if (/^https?:\/\/localhost(:\d+)?$/.test(origin) || /\.app\.github\.dev$/.test(origin)) return cb(null, true);
+
+    const normalized = normalizeOrigin(origin);
+    const isLocal = /^https?:\/\/localhost(:\d+)?$/.test(normalized) || /\.app\.github\.dev$/.test(normalized);
+    const isEnvAllowed = allowedOrigins.some((allowed) => allowed === normalized);
+
+    if (isLocal || isEnvAllowed) return cb(null, true);
     cb(new Error('Not allowed by CORS'));
   },
   credentials: true,

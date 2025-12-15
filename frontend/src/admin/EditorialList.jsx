@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { api } from "../api/client";
 import { Pencil, Trash2, RotateCw, CalendarDays, Clock, BadgeInfo } from "lucide-react";
 import Modal from "../components/Modal";
@@ -9,11 +9,17 @@ export default function EditorialList({ onEdit, onNew }) {
 
   // Modal
   const [modal, setModal] = useState({ show: false, title: "", content: null, mode: "alert", onConfirm: null });
-  const openAlert = (title, content) => setModal({ show: true, title, content, mode: "alert", onConfirm: null });
-  const openConfirm = (title, content, onConfirm) => setModal({ show: true, title, content, mode: "confirm", onConfirm });
-  const closeModal = () => setModal((m) => ({ ...m, show: false, onConfirm: null }));
+  const openAlert = useCallback(
+    (title, content) => setModal({ show: true, title, content, mode: "alert", onConfirm: null }),
+    []
+  );
+  const openConfirm = useCallback(
+    (title, content, onConfirm) => setModal({ show: true, title, content, mode: "confirm", onConfirm }),
+    []
+  );
+  const closeModal = useCallback(() => setModal((m) => ({ ...m, show: false, onConfirm: null })), []);
 
-  async function load() {
+  const load = useCallback(async () => {
     setLoading(true);
     try {
       const r = await api.get("/api/editorials", { params: { page: 1, pageSize: 100 } });
@@ -21,9 +27,9 @@ export default function EditorialList({ onEdit, onNew }) {
     } catch (e) {
       openAlert("Errore caricamento", e?.response?.data?.error || e.message);
     } finally { setLoading(false); }
-  }
+  }, [openAlert]);
 
-  useEffect(() => { load(); }, []);
+  useEffect(() => { load(); }, [load]);
 
   async function removeItem(it) {
     openConfirm(

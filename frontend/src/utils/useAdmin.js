@@ -18,10 +18,13 @@ export function useAdmin(){
           try {
             const r = await api.get('/api/_auth/me');
             isAdmin = !!r.data?.isAdmin;
-          } catch {}
+          } catch (err) {
+            console.warn('Fallback admin check failed', err?.message || err);
+          }
         }
         setState({ user:u, isAdmin, loading:false });
-      }catch{
+      }catch(err){
+        console.error('Errore verifica admin', err);
         setState({ user:u, isAdmin:false, loading:false });
       }
     });

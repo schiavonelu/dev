@@ -10,15 +10,15 @@ import admin from 'firebase-admin';
  */
 const gac = process.env.GOOGLE_APPLICATION_CREDENTIALS;
 if (!gac) {
-  throw new Error('GOOGLE_APPLICATION_CREDENTIALS non impostata: punta al tuo sa.json');
+  console.warn('[firebase-admin] GOOGLE_APPLICATION_CREDENTIALS non impostata: le API admin richiederanno una key valida.');
 }
 
-if (!admin.apps.length) {
+if (gac && !admin.apps.length) {
   console.log('[firebase-admin] Using applicationDefault:', gac);
   admin.initializeApp({
     credential: admin.credential.applicationDefault(),
   });
 }
 
-export const firestore = admin.firestore();
-export const authAdmin  = admin.auth();
+export const firestore = admin.apps.length ? admin.firestore() : null;
+export const authAdmin  = admin.apps.length ? admin.auth() : null;
